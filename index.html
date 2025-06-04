@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Picture of the Day</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      color: #66fcf1;
+      margin: 0;
+    }
+
+    form {
+      text-align: center;
+      margin: 2rem auto;
+    }
+
+    label {
+      font-size: 1.2rem;
+      margin-right: 10px;
+    }
+
+    #search-input {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #45a29e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #66fcf1;
+      color: #0b0c10;
+    }
+
+    #current-image-container {
+      max-width: 800px;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    #current-image-container img, 
+    #current-image-container iframe {
+      max-width: 50%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 1.8rem;
+    }
+
+    #search-history {
+      max-width: 400px;
+      margin: 0 auto;
+      list-style: none;
+      padding: 0;
+    }
+
+    #search-history li {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #search-history li:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NASA Astronomy Picture of the Day</h1>
+  </header>
+
+  <form id="search-form">
+    <label for="search-input">Select Date:</label>
+    <input type="date" id="search-input" required>
+    <button type="submit">Search</button>
+  </form>
+
+  <section id="current-image-container">
+    <!-- Image data will be shown here -->
+  </section>
+
+  <h2>Search History</h2>
+  <ul id="search-history"></ul>
+
+  <script src="index.js"></script>
+</body>
+</html>
